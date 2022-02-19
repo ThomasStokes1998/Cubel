@@ -1,0 +1,107 @@
+* {
+    font-family: sans-serif;
+}
+.menu-container {
+    display: block;
+    width: 100%;
+    height: 75px;
+    font-size: 3rem;
+}
+.menu {
+    float: left;
+    text-align: center;
+    padding: 10px;
+}
+#left-padding {
+    width: 30%;
+}
+#help:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+#title {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-decoration: underline;
+}
+#stats:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+#scramble {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.guess-container {
+    display: block;
+    height: 400px;
+}
+.grid-row {
+    display: block;
+    height: 40px;
+}
+.grid-padding {
+    float: left;
+    width: 25%;
+}
+.black-square {
+    float: left;
+    background-color: grey;
+    height: 100%;
+    width: 35px;
+    color: white;
+    padding-right: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.green-square {
+    float: left;
+    background-color: darkgreen;
+    height: 100%;
+    width: 35px;
+    color: white;
+    padding-right: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.yellow-square {
+    float: left;
+    background-color: yellowgreen;
+    height: 100%;
+    width: 35px;
+    color: white;
+    padding-right: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.red-square {
+    float: left;
+    background-color: darkred;
+    height: 100%;
+    width: 35px;
+    color: white;
+    padding-right: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.keyboard {
+    display: block;
+    height: 50px;
+}
+.key {
+    float: left;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.key:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
