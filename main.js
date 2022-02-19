@@ -1,9 +1,9 @@
 let keys = ["F", "F'", "F2", "R", "R'", "R2", "U", "U'", "U2"];
+cdict = []
 corrguess = []
 guesses = 0
 currguess = []
-cdict = []
-const ROWS = 10;
+const ROWS = 8;
 const COLS = 8;
 
 async function main(url) {
@@ -37,11 +37,19 @@ async function main(url) {
         console.log(message)
     })
 }
+
 main("cuble.csv");
-console.log(cdict);
+
+function newGame() {
+    corrguess = []
+    guesses = 0
+    currguess = []
+    main("cuble.csv");
+}
 
 function generateGrid() {
     container = document.getElementsByClassName("guess-container")[0]
+    container.innerHTML = ""
     for (let i = 0; i < ROWS; i++) {
         row_container = document.createElement("div")
         row_container.setAttribute("class", "grid-row")
@@ -79,7 +87,7 @@ function endTurn() {
         if (correct_moves === 8) {
             alert(`You Won in ${guesses} guesses!`)
         }
-        else if (guesses > 9) {
+        else if (guesses > ROWS - 1) {
             alert(`Game over, correct solution: ${corrguess}`)
         }
     }
@@ -103,6 +111,7 @@ function applyKey(k) {
 
 function generateKeyboard() {
     container = document.getElementsByClassName("keyboard")[0]
+    container.innerHTML = ""
     // Valid Moves
     for (let i = 0; i < 9; i++) {
         _key = document.createElement("div")
@@ -117,10 +126,18 @@ function generateKeyboard() {
     _key.setAttribute("onclick", `applyKey("undo")`)
     _key.innerHTML = "undo"
     container.appendChild(_key)
+    // New Game
+    _key = document.createElement("div")
+    _key.setAttribute("class", "key")
+    _key.setAttribute("id", "rkey")
+    _key.setAttribute("onclick", `newGame()`)
+    _key.innerHTML = "New Game"
+    container.appendChild(_key)
     // Apply Scramble
     _key = document.createElement("div")
     _key.setAttribute("class", "key")
+    _key.setAttribute("id", "rkey")
     _key.setAttribute("onclick", `applyKey("submit")`)
-    _key.innerHTML = "submit"
+    _key.innerHTML = "Submit Moves"
     container.appendChild(_key)
 }

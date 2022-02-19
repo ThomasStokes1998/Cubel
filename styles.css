@@ -40,7 +40,7 @@
 }
 .grid-row {
     display: block;
-    height: 40px;
+    height: 50px;
 }
 .grid-padding {
     float: left;
@@ -50,7 +50,7 @@
     float: left;
     background-color: grey;
     height: 100%;
-    width: 35px;
+    width: 40px;
     color: white;
     padding-right: 5px;
     border-radius: 10px;
@@ -60,7 +60,7 @@
     float: left;
     background-color: darkgreen;
     height: 100%;
-    width: 35px;
+    width: 40px;
     color: white;
     padding-right: 5px;
     border-radius: 10px;
@@ -70,7 +70,7 @@
     float: left;
     background-color: yellowgreen;
     height: 100%;
-    width: 35px;
+    width: 40px;
     color: white;
     padding-right: 5px;
     border-radius: 10px;
@@ -80,10 +80,15 @@
     float: left;
     background-color: darkred;
     height: 100%;
-    width: 35px;
+    width: 40px;
     color: white;
     padding-right: 5px;
     border-radius: 10px;
+    text-align: center;
+}
+#kboard_text {
+    font-size: 1.5rem;
+    display: block;
     text-align: center;
 }
 .keyboard {
@@ -104,4 +109,7 @@
 .key:hover {
     cursor: pointer;
     background-color: aqua;
+}
+#rkey {
+    float: right;
 }
